@@ -22,3 +22,11 @@ body {
     width: 100%;
   }
 }
+.two {
+  height: 600px;
+}
+
+.NavBottom {
+  margin: 1rem 0 !important;
+  border-top: 3px solid #333 !important;
+}

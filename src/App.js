@@ -1,10 +1,17 @@
 import React from "react";
 
-import { Cards, CountryPicker, Chart } from "./components";
+import {
+  Cards,
+  CountryPicker,
+  Chart,
+  NavBar,
+  Landing,
+  NavBottom,
+} from "./components";
 import { fetchData } from "./api/";
+import Paper from "./components/Paper";
 import styles from "./App.module.css";
-
-import image from "./images/image.png";
+import { Grid } from "@material-ui/core";
 
 class App extends React.Component {
   state = {
@@ -28,12 +35,83 @@ class App extends React.Component {
     const { data, country } = this.state;
 
     return (
-      <div className={styles.container}>
-        <img className={styles.image} src={image} alt="COVID-19" />
-        <Cards data={data} />
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
-      </div>
+      <>
+        <NavBar />
+        <Landing />
+
+        <Grid
+          container
+          spacing={1}
+          item
+          xs={12}
+          direction="row"
+          justify="center"
+          alignItems="center"
+          className={styles.two}
+        >
+          <Grid
+            container
+            spacing={1}
+            item
+            sm={12}
+            md={5}
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            {" "}
+            <Paper />
+          </Grid>
+          <Grid
+            container
+            spacing={1}
+            item
+            sm={12}
+            md={6}
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            <Cards data={data} />
+          </Grid>
+
+          <Grid
+            container
+            spacing={1}
+            item
+            sm={12}
+            md={4}
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            <CountryPicker handleCountryChange={this.handleCountryChange} />
+          </Grid>
+
+          <Grid
+            xs={12}
+            md={8}
+            item
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            <Chart data={data} country={country} />
+          </Grid>
+          <Grid
+            xs={12}
+            item
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+            className={styles.NavBottom}
+          >
+            <NavBottom />
+          </Grid>
+        </Grid>
+      </>
     );
   }
 }

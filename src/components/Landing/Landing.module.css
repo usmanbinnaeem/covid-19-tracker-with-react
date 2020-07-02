@@ -1,0 +1,55 @@
+.image {
+  background-color: #333;
+  /* animation: rotation 2s infinite linear; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.imagee {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5% !important;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+/* @keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+} */
+
+.maingrid {
+  margin-top: 8% !important;
+}
+
+.grid2 {
+  margin-left: 4%;
+}
+.active {
+  border-left: 10px solid #004a94;
+}
+.newcases {
+  border-left: 10px solid #593e32;
+}
+
+.newdeaths {
+  border-left: 10px solid red;
+}
+.serious {
+  border-left: 10px solid orange;
+}
+.unresolved {
+  border-left: 10px solid #f878f8;
+}
+
+.affectedcountries {
+  border-left: 10px solid #ef2303;
+}

@@ -1,0 +1,17 @@
+.covid {
+  font-weight: bolder !important;
+  font-family: "Francois One", sans-serif !important;
+  text-align: start;
+}
+.typography {
+  text-align: start;
+}
+.button {
+  margin-top: 5% !important;
+  font-weight: 700 !important;
+  background-color: #fff8c6;
+  color: gray;
+}
+.paper {
+  border-left: 10px solid #333333;
+}

@@ -23,7 +23,6 @@ export const fetchData = async (country) => {
 export const fetchDailyData = async () => {
   try {
     const { data } = await axios.get(`${url}/daily`);
-
     return data.map(({ confirmed, deaths, reportDate: date }) => ({
       confirmed: confirmed.total,
       deaths: deaths.total,
@@ -33,6 +32,21 @@ export const fetchDailyData = async () => {
     return error;
   }
 };
+
+// export const getDailyData = async () => {
+//   const globalStatee = await fetch(
+//     "https://thevirustracker.com/timeline/map-data.json"
+//   );
+
+//   // const dataa = globalState.json();
+
+//   return dataa.map((globalStatee) => ({
+//     cases: globalStatee.results[0].total_cases,
+//     deaths: globalStatee.results[0].total_deaths,
+//     unresolved: globalStatee.results[0].total_unresolved,
+//     recovered: globalStatee.results[0].total_recovered,
+//   }));
+// };
 
 export const fetchCountries = async () => {
   try {
