@@ -31,13 +31,17 @@ export default function GlobelStates() {
       const fetchApiData = await fetch(
         "https://api.thevirustracker.com/free-api?global=stats"
       );
-      console.log(fetchApiData);
+
       const DataFromApi = await fetchApiData.json();
-      console.log(DataFromApi);
+
       setGlobalState(DataFromApi);
     }
     fetchFromApi();
   }, []);
+
+  if (!globalState) {
+    return "Loading...";
+  }
 
   return (
     <div className={cx(styles.image)}>
@@ -194,6 +198,7 @@ export default function GlobelStates() {
           ) : null}
         </Grid>
       </div>
+      {/* <simpleMap /> */}
     </div>
   );
 }
