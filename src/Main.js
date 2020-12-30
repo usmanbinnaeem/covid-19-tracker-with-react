@@ -28,46 +28,26 @@ class Main extends React.Component {
 
     return (
       <>
-        {/* <NavBar /> */}
+        
         <Landing />
-        {/* <Grid
-          container
-          spacing={1}
-          item
-          xs={12}
-          direction="row"
-          justify="center"
-          alignItems="center"
-          className={styles.two}
-        > */}
+    
         <Grid
-          container
-          spacing={1}
           item
           sm={12}
-          md={5}
-          direction="row"
-          justify="center"
-          alignItems="center"
+          md={6}
         >
           {" "}
           <Paper />
         </Grid>
         <Grid
-          container
-          spacing={1}
           item
           sm={12}
           md={6}
-          direction="row"
-          justify="center"
-          alignItems="center"
         >
           <Cards data={data} />
         </Grid>
         <Grid
           container
-          spacing={1}
           item
           sm={12}
           md={4}
@@ -90,8 +70,6 @@ class Main extends React.Component {
         >
           <Chart data={data} country={country} />
         </Grid>
-        {/* </Grid> */}
-        )}
       </>
     );
   }
