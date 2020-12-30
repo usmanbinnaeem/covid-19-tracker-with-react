@@ -28,22 +28,13 @@ class Main extends React.Component {
 
     return (
       <>
-        
         <Landing />
-    
-        <Grid
-          item
-          sm={12}
-          md={6}
-        >
+
+        <Grid item sm={12} md={6}>
           {" "}
           <Paper />
         </Grid>
-        <Grid
-          item
-          sm={12}
-          md={6}
-        >
+        <Grid item sm={12} md={6}>
           <Cards data={data} />
         </Grid>
         <Grid
