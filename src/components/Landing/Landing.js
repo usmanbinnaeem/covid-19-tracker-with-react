@@ -39,23 +39,18 @@ export default function GlobelStates() {
     fetchFromApi();
   }, []);
 
-  if (!globalState) {
-    return "Loading...";
-  }
-
   return (
     <div className={cx(styles.image)}>
       <div>
         <Grid
           container
-          spacing={1}
           item
           xs={12}
           direction="row"
           justify="center"
           alignItems="center"
         >
-          <Grid container className={styles.maingrid} item xs={12} sm={5}>
+          <Grid container className={styles.maingrid} item xs={12} sm={4}>
             <img
               className={styles.imagee}
               src={corona}
@@ -68,7 +63,7 @@ export default function GlobelStates() {
             <Grid
               className={styles.grid2}
               item
-              sm={6}
+              sm={8}
               container
               direction="row"
               justify="flex-end"
@@ -195,10 +190,110 @@ export default function GlobelStates() {
                 </Paper>
               </Grid>
             </Grid>
-          ) : null}
+          ) : (
+            <Grid
+              className={styles.grid2}
+              item
+              sm={8}
+              container
+              direction="row"
+              justify="flex-end"
+              alignItems="center"
+            >
+              <Grid item xs={12} sm={4}>
+                <Paper spacing={3} className={cx(styles.active, classes.paper)}>
+                  <Typography
+                    varient="h4"
+                    gutterbottom
+                    style={{ color: "#004a94", fontWeight: "bolder" }}
+                  >
+                    Loading
+                  </Typography>
+                  <Typography varient="subtitle2" gutterbottom>
+                    Total Active Cases
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Paper
+                  spacing={3}
+                  className={cx(styles.newcases, classes.paper)}
+                >
+                  <Typography
+                    varient="h4"
+                    gutterbottom
+                    style={{ color: "#593E32", fontWeight: "bolder" }}
+                  >
+                    Loading
+                  </Typography>
+                  <Typography varient="subtitle2" gutterbottom>
+                    Total New Cases Today
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Paper className={cx(styles.newdeaths, classes.paper)}>
+                  <Typography
+                    varient="h4"
+                    
+                    style={{ color: "red", fontWeight: "bolder" }}
+                  >
+                   Loading
+                  </Typography>
+                  <Typography varient="subtitle2" >
+                    Total New Deaths 
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Paper className={cx(styles.serious, classes.paper)}>
+                  {" "}
+                  <Typography
+                    varient="h4"
+                    style={{ color: "orange", fontWeight: "bolder" }}
+                    
+                  >
+                    Loading
+                  </Typography>
+                  <Typography varient="subtitle2" >
+                    Total serious cases
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Paper className={cx(styles.unresolved, classes.paper)}>
+                  {" "}
+                  <Typography
+                    varient="h4"
+                    style={{ color: "#F878F8", fontWeight: "bolder" }}
+                    
+                  >
+                    Loading
+                  </Typography>
+                  <Typography varient="subtitle2">
+                    Total unresolved cases
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Paper className={cx(styles.affectedcountries, classes.paper)}>
+                  {" "}
+                  <Typography
+                    varient="h4"
+                    style={{ color: "#EF2303", fontWeight: "bolder" }}
+                  
+                  >
+                   Loading
+                  </Typography>
+                  <Typography varient="subtitle2">
+                    Affected Countries
+                  </Typography>
+                </Paper>
+              </Grid>
+            </Grid>
+          )}
         </Grid>
       </div>
-      {/* <simpleMap /> */}
     </div>
   );
 }
