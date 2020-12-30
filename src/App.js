@@ -104,10 +104,6 @@ class App extends Component {
           <Grid
             xs={12}
             item
-            // container
-            direction="row"
-            justify="center"
-            alignItems="center"
           >
             <div className="root">
               <Legend
