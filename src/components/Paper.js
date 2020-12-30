@@ -14,29 +14,23 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
   },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
-  },
   title: {
-    fontSize: 14,
+    fontSize: 12,
   },
   pos: {
-    marginBottom: 12,
+    marginBottom: 6,
   },
 });
 
 export default function SimpleCard() {
   const classes = useStyles();
-  // const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={cx(styles.paper, classes.root)}>
       <CardContent>
         <Typography
-          color="#000"
-          variant="h2"
+          color="textSecondary"
+          variant="h4"
           gutterBottom
           className={styles.covid}
         >
@@ -45,9 +39,6 @@ export default function SimpleCard() {
         <Typography variant="h5" className={styles.typography}>
           Explore J.P. Morgan’s latest perspectives on how the pandemic is
           impacting global economies, markets and industries.
-          {/* <div>
-            
-          </div> */}
         </Typography>
       </CardContent>
       <CardActions>
